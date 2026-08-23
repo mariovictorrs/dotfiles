@@ -60,6 +60,7 @@
     asunder
     picard
     orca-slicer
+    cliamp
 
     # Utilities
     podman
