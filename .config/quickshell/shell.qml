@@ -12,12 +12,12 @@ PanelWindow {
     left: true
     right: true
   }
+  implicitHeight: screen.height * 0.035
 
-  implicitHeight: 30
-  color: "#1e1e2e"
+  color: Colors.background
 
   RowLayout {
-    anchors {
+   anchors {
       left: parent.left
       verticalCenter: parent.verticalCenter
       leftMargin: 12
@@ -26,7 +26,7 @@ PanelWindow {
 
     Repeater {
       model: Hyprland.workspaces
-      Text { text: modelData.id; color: "#cdd6f4" }
+      Text { text: modelData.id; color: Colors.foreground }
     }
   }
 
@@ -36,7 +36,7 @@ PanelWindow {
 
     Text {
       text: Qt.formatDateTime(clock.date, "hh:mm")
-      color: "#94e2d5"
+      color: Colors.accent
     }
   }
 
@@ -49,16 +49,14 @@ PanelWindow {
     }
     spacing: 16
 
-    // vol, bat, net
-
     Text {
       text: "vol " + Math.round((Pipewire.defaultAudioSink?.audio?.volume ?? 0) * 100) + "%"
-      color: "#e0af68"
+      color: Colors.warning
     } PwObjectTracker { objects: [Pipewire.defaultAudioSink] }
 
     Text {
       text: "bat " + UPower.displayDevice.percentage * 100 + "%"
-      color: "#9ece6a"
+      color: Colors.success
     }
   }
 
