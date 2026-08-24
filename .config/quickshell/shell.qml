@@ -1,10 +1,9 @@
 import Quickshell
 import QtQuick
 import QtQuick.Layouts
+import qs.Commons
 
-import Quickshell.Services.UPower
-import Quickshell.Services.Pipewire
-import Quickshell.Hyprland
+import "./widgets"
 
 PanelWindow {
   anchors {
@@ -16,30 +15,17 @@ PanelWindow {
 
   color: Colors.background
 
-  RowLayout {
-   anchors {
+  Workspaces {
+    anchors {
       left: parent.left
       verticalCenter: parent.verticalCenter
       leftMargin: 12
     }
-    spacing: 8
-
-    Repeater {
-      model: Hyprland.workspaces
-      Text { text: modelData.id; color: Colors.foreground }
-    }
   }
 
-  RowLayout {
+  Clock {
     anchors.centerIn: parent
-    spacing: 8
-
-    Text {
-      text: Qt.formatDateTime(clock.date, "hh:mm")
-      color: Colors.accent
-    }
   }
-
 
   RowLayout {
     anchors {
@@ -49,19 +35,7 @@ PanelWindow {
     }
     spacing: 16
 
-    Text {
-      text: "vol " + Math.round((Pipewire.defaultAudioSink?.audio?.volume ?? 0) * 100) + "%"
-      color: Colors.warning
-    } PwObjectTracker { objects: [Pipewire.defaultAudioSink] }
-
-    Text {
-      text: "bat " + UPower.displayDevice.percentage * 100 + "%"
-      color: Colors.success
-    }
-  }
-
-  SystemClock {
-    id: clock
-    precision: SystemClock.Minutes
+    Volume {}
+    Battery {}
   }
 }
