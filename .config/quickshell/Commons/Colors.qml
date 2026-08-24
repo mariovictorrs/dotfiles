@@ -39,7 +39,7 @@ QtObject {
   // Semantic colors
   readonly property string background: "#1e1e2e"
   readonly property string foreground: "#cdd6f4"
-  readonly property string accent: "#94e2d5"
+  readonly property string accent: "#89b4fa"
   readonly property string warning: "#f9e2af"
   readonly property string success: "#a6e3a1"
   readonly property string error: "#f38ba8"

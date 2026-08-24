@@ -35,7 +35,9 @@ PanelWindow {
     }
     spacing: 16
 
-    Volume {}
     Battery {}
+    Volume {}
+    NetworkWidget {}
+    PowerActions {}
   }
 }
