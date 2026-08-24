@@ -12,7 +12,7 @@ PanelWindow {
     left: true
     right: true
   }
-  implicitHeight: screen.height * 0.035
+  implicitHeight: screen.height * 0.03
 
   color: Colors.background
 
