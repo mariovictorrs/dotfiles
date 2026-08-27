@@ -7,6 +7,7 @@ local terminal = "ghostty +new-window"
 local fileManager = "nautilus"
 local appLaucher = "rofi -show drun -show-icons"
 local runner = "rofi -show run"
+local browser = "firefox"
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -20,6 +21,7 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(appLaucher))
 hl.bind(secondMod .. " + SPACE", hl.dsp.exec_cmd(runner))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 
 hl.bind(
   secondMod .. " + Q",
