@@ -3,7 +3,7 @@
 ---------------------
 
 -- Set programs that you use
-local terminal = "ghostty"
+local terminal = "ghostty +new-window"
 local fileManager = "nautilus"
 local appLaucher = "rofi -show drun -show-icons"
 local runner = "rofi -show run"

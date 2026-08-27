@@ -2,8 +2,9 @@
 ---- AUTOSTART ----
 -------------------
 
--- waybar and hyprpolkitagent are managed by systemd (see scripts/linux/11-hyprland.sh)
 hl.on("hyprland.start", function()
+  hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+
   hl.exec_cmd("quickshell")
   hl.exec_cmd("playerctld daemon")
   hl.exec_cmd("hypridle")
