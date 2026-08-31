@@ -53,6 +53,7 @@ PanelWindow {
   Pill {
     id: powerPill
 
+    round: true
     anchors {
       right: parent.right
       verticalCenter: parent.verticalCenter

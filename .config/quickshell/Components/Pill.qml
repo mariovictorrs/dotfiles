@@ -7,8 +7,9 @@ Rectangle {
 
   default property alias content: layout.children
   property alias spacing: layout.spacing
+  property bool round: false
 
-  implicitWidth: layout.implicitWidth + Theme.pillPaddingH * 2
+  implicitWidth: round ? implicitHeight : layout.implicitWidth + Theme.pillPaddingH * 2
   implicitHeight: Theme.pillHeight
   radius: height / 2
   color: Colors.mantle
