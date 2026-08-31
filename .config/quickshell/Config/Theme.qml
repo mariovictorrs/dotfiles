@@ -24,7 +24,8 @@ QtObject {
   // Pill
   readonly property int pillHeight:    32
   readonly property int pillPaddingH:  14
-  readonly property int pillSpacing:   16
+  readonly property int pillSpacing:   8
+  readonly property int pillGap:       16
 
   // Font sizes
   readonly property int fontSizeSmall:  12

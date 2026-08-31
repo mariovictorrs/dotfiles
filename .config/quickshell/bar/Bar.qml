@@ -42,7 +42,7 @@ PanelWindow {
     anchors {
       right: powerPill.left
       verticalCenter: parent.verticalCenter
-      rightMargin: Theme.pillSpacing
+      rightMargin: Theme.pillGap
     }
 
     BatteryButton {}
