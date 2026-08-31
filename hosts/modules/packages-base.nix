@@ -14,6 +14,11 @@
     GTK_IM_MODULE = "simple";
   };
 
+  # Fix for Copilot CLI on NixOS (issue #3392)
+  # Copilot CLI >= 1.0.49 hardcodes /bin/bash lookup
+  # envfs mounts the Nix store at standard FHS paths for compatibility
+  services.envfs.enable = true;
+
   # Base system packages
   environment.systemPackages = with pkgs; [
     # Text editors & tools
