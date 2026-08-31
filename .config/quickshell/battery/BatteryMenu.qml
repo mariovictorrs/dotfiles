@@ -65,7 +65,6 @@ PopupWindow {
           height: 34
           radius: Theme.buttonRadius
           color: active ? Colors.surface0 : "transparent"
-          border.color: active ? Colors.accent : Colors.surface1
           opacity: BatteryService.settingProfile ? 0.5 : 1.0
 
           Row {

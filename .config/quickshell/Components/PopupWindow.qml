@@ -46,7 +46,6 @@ Window {
     anchors.fill: parent
     radius: Theme.popupRadius
     color: Colors.crust
-    border.color: Colors.surface1
 
     Column {
       id: contentColumn

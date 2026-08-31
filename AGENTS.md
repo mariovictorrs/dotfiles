@@ -1,4 +1,4 @@
-# Copilot Instructions for `mariovictorrs/dotfiles`
+# AI Agent Instructions for `mariovictorrs/dotfiles`
 
 ## Build, test, and lint commands
 

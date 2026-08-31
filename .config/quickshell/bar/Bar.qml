@@ -1,7 +1,7 @@
 import QtQuick
-import QtQuick.Layouts
 import Quickshell
 import qs.Config
+import qs.Components
 import qs.workspaces
 import qs.clock
 import qs.battery
@@ -18,31 +18,47 @@ PanelWindow {
     right: true
   }
   implicitHeight: screen.height * Theme.barHeightRatio
-  color: Colors.background
+  color: "transparent"
 
-  Workspaces {
+  Pill {
     anchors {
       left: parent.left
       verticalCenter: parent.verticalCenter
       leftMargin: Theme.barMargin
     }
+
+    Workspaces {}
   }
 
-  Clock {
+  Pill {
     anchors.centerIn: parent
+
+    Clock {}
   }
 
-  RowLayout {
+  Pill {
+    id: statusPill
+
+    anchors {
+      right: powerPill.left
+      verticalCenter: parent.verticalCenter
+      rightMargin: Theme.pillSpacing
+    }
+
+    BatteryButton {}
+    VolumeButton {}
+    NetworkButton {}
+  }
+
+  Pill {
+    id: powerPill
+
     anchors {
       right: parent.right
       verticalCenter: parent.verticalCenter
       rightMargin: Theme.barMargin
     }
-    spacing: Theme.widgetSpacing
 
-    BatteryButton {}
-    VolumeButton {}
-    NetworkButton {}
     PowerButton {}
   }
 }

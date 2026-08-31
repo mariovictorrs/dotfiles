@@ -21,6 +21,11 @@ QtObject {
   readonly property int buttonHeight: 28
   readonly property int buttonPadding: 18
 
+  // Pill
+  readonly property int pillHeight:    32
+  readonly property int pillPaddingH:  14
+  readonly property int pillSpacing:   16
+
   // Font sizes
   readonly property int fontSizeSmall:  12
   readonly property int fontSizeNormal: 13

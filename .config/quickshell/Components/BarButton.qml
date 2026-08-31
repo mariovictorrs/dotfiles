@@ -15,9 +15,6 @@ Rectangle {
   implicitHeight: Theme.buttonHeight
   radius: Theme.buttonRadius
   color: hoverArea.containsMouse || menuOpen ? Colors.surface0 : Colors.mantle
-  border.color: menuOpen
-    ? (dangerStyle ? Colors.error : Colors.accent)
-    : Colors.surface1
 
   Text {
     id: label
@@ -41,5 +38,4 @@ Rectangle {
   }
 
   Behavior on color { ColorAnimation { duration: 100 } }
-  Behavior on border.color { ColorAnimation { duration: 100 } }
 }
