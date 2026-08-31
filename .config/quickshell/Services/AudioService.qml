@@ -11,11 +11,11 @@ QtObject {
   readonly property bool muted: available ? sink.audio.muted : false
 
   readonly property string icon: {
-    if (muted) return ""
-    if (volume >= 0.67) return ""
-    if (volume >= 0.34) return ""
-    if (volume > 0) return ""
-    return ""
+    if (muted) return "󰖁"
+    if (volume >= 0.67) return "󰕾"
+    if (volume >= 0.34) return "󰖀"
+    if (volume > 0) return "󰕿"
+    return "󰝟"
   }
 
   readonly property string label: {
