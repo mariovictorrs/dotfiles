@@ -35,6 +35,7 @@
 
     # Shells & tools
     zsh
+    bash
     starship
     zoxide
 
