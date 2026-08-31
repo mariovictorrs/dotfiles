@@ -1,0 +1,5 @@
+module qs.Components
+BarButton 1.0 BarButton.qml
+PopupWindow 1.0 PopupWindow.qml
+PopupHeader 1.0 PopupHeader.qml
+Separator 1.0 Separator.qml

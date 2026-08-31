@@ -1,43 +1,12 @@
 import Quickshell
-import QtQuick
-import QtQuick.Layouts
-import qs.Commons
+import qs.bar
 
-import "./widgets"
-
-PanelWindow {
-  anchors {
-    top: true
-    left: true
-    right: true
-  }
-  implicitHeight: screen.height * 0.04
-
-  color: Colors.background
-
-  Workspaces {
-    anchors {
-      left: parent.left
-      verticalCenter: parent.verticalCenter
-      leftMargin: 12
+ShellRoot {
+  Variants {
+    model: Quickshell.screens
+    Bar {
+      required property var modelData
+      screen: modelData
     }
-  }
-
-  Clock {
-    anchors.centerIn: parent
-  }
-
-  RowLayout {
-    anchors {
-      right: parent.right
-      verticalCenter: parent.verticalCenter
-      rightMargin: 12
-    }
-    spacing: 16
-
-    Battery {}
-    Volume {}
-    NetworkWidget {}
-    PowerActions {}
   }
 }
