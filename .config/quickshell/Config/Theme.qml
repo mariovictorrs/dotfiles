@@ -3,8 +3,8 @@ import QtQml
 
 QtObject {
   // Bar
-  readonly property real barHeightRatio: 0.04
-  readonly property int  barMargin:      12
+  readonly property real barHeightRatio: 0.038
+  readonly property int  barMargin:      5
   readonly property int  widgetSpacing:  16
 
   // Popup
