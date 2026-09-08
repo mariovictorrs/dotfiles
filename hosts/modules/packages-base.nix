@@ -72,6 +72,7 @@
     podman
     podman-compose
     github-copilot-cli
+    gh
     ente-auth
   ];
 
