@@ -10,6 +10,8 @@ PopupWindow {
   readonly property var actions: [
     { label: "Lock",      icon: "󰌾", command: ["hyprlock"] },
     { label: "Sleep",     icon: "󰤄", command: ["systemctl", "suspend"] },
+    { label: "Hibernate", icon: "󰒲", command: ["systemctl", "hibernate"] },
+    { label: "Logout",    icon: "󰍃", command: ["hyprctl", "dispatch", "exit"] },
     { label: "Reboot",    icon: "󰜉", command: ["systemctl", "reboot"] },
     { label: "Power off", icon: "󰐥", command: ["systemctl", "poweroff"] }
   ]
