@@ -11,6 +11,5 @@
     "nordvpn"
   ];
 
-  networking.firewall.enable = true;
   networking.firewall.checkReversePath = "loose";
 }

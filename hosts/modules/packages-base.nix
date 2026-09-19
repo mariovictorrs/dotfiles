@@ -119,4 +119,6 @@
     };
 
   };
+
+  networking.firewall.enable = true;
 }
