@@ -11,7 +11,6 @@
       "networkmanager"
       "wheel"
       "podman"
-      "nordvpn"
     ];
     shell = pkgs.zsh;
   };

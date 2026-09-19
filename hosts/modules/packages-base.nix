@@ -74,7 +74,6 @@
     github-copilot-cli
     gh
     ente-auth
-    nordvpn
   ];
 
   # Podman
@@ -118,9 +117,6 @@
         cups-browsed
       ];
     };
-
-    # Enable NordVPN
-    nordvpn.enable = true;
 
   };
 }
