@@ -89,8 +89,9 @@
   nix = {
     gc = {
       automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 30d";
+      dates = "daily";
+      persistent = true;
+      options = "--delete-older-than 15d";
     };
 
     # Optmize storage
