@@ -78,7 +78,11 @@
 
   # Podman
   virtualisation = {
-    containers.enable = true;
+    containers = {
+      enable = true;
+      registries.settings.registries.search.registries = [ "docker.io" ];
+      containersConf.settings.engine.compose_warning_logs = false;
+    };
     podman = {
       enable = true;
       dockerCompat = true;
