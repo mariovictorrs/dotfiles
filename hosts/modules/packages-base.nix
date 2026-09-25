@@ -9,11 +9,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Make GTK use its simple IM implementation to enable compose/dead keys in ghostty
-  environment.sessionVariables = {
-    GTK_IM_MODULE = "simple";
-  };
-
   # Fix for Copilot CLI on NixOS (issue #3392)
   # Copilot CLI >= 1.0.49 hardcodes /bin/bash lookup
   # envfs mounts the Nix store at standard FHS paths for compatibility

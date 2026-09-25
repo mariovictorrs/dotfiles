@@ -12,4 +12,9 @@
     displayManager.sddm.enable = true;
     desktopManager.plasma6.enable = true;
   };
+
+  # Make GTK use its simple IM implementation to enable compose/dead keys in ghostty
+  environment.sessionVariables = {
+    GTK_IM_MODULE = "simple";
+  };
 }
