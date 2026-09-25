@@ -13,7 +13,7 @@
     ../modules/users.nix
     ../modules/packages-base.nix
     ../modules/packages-nvim.nix
-    ../modules/plasma-desktop.nix
+    ../modules/gnome-desktop.nix
     ../modules/hyprland.nix
   ];
 
