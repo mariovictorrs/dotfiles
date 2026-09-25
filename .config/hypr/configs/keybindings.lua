@@ -74,32 +74,32 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind(
   "XF86AudioRaiseVolume",
-  hl.dsp.exec_cmd("swayosd-client --output-volume raise"),
+  hl.dsp.exec_cmd("qs ipc call osd volumeUp"),
   { locked = true, repeating = true }
 )
 hl.bind(
   "XF86AudioLowerVolume",
-  hl.dsp.exec_cmd("swayosd-client --output-volume lower"),
+  hl.dsp.exec_cmd("qs ipc call osd volumeDown"),
   { locked = true, repeating = true }
 )
 hl.bind(
   "XF86AudioMute",
-  hl.dsp.exec_cmd("swayosd-client --output-volume mute-toggle"),
+  hl.dsp.exec_cmd("qs ipc call osd toggleMute"),
   { locked = true, repeating = true }
 )
 hl.bind(
   "XF86AudioMicMute",
-  hl.dsp.exec_cmd("swayosd-client --input-volume mute-toggle"),
+  hl.dsp.exec_cmd("qs ipc call osd toggleInputMute"),
   { locked = true, repeating = true }
 )
 hl.bind(
   "XF86MonBrightnessUp",
-  hl.dsp.exec_cmd("swayosd-client --brightness raise"),
+  hl.dsp.exec_cmd("qs ipc call osd brightnessUp"),
   { locked = true, repeating = true }
 )
 hl.bind(
   "XF86MonBrightnessDown",
-  hl.dsp.exec_cmd("swayosd-client --brightness lower"),
+  hl.dsp.exec_cmd("qs ipc call osd brightnessDown"),
   { locked = true, repeating = true }
 )
 

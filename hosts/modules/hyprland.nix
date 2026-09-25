@@ -18,8 +18,7 @@
     quickshell
     rofi
     nautilus
-    # Media and feedback
-    swayosd
+    # Media and brightness controls
     brightnessctl
     playerctl
     # Lock and Wallpaper

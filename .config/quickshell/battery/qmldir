@@ -1,3 +1,0 @@
-module qs.battery
-BatteryButton 1.0 BatteryButton.qml
-BatteryMenu 1.0 BatteryMenu.qml
