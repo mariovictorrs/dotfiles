@@ -42,8 +42,7 @@
       "rd.systemd.show_status=auto"
     ];
 
-    initrd.luks.devices."luks-db686937-682c-4e74-a7dd-429ac085c510".device =
-      "/dev/disk/by-uuid/db686937-682c-4e74-a7dd-429ac085c510";
+    initrd.luks.devices."luks-3087ca86-006e-4ec9-b222-92539539e463".device = "/dev/disk/by-uuid/3087ca86-006e-4ec9-b222-92539539e463";
     initrd.verbose = false;
     consoleLogLevel = 3;
 
