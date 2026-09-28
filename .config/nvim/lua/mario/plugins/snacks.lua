@@ -3,8 +3,33 @@ return {
   priority = 1000,
   lazy = false,
   opts = {
-    picker = { enabled = true },
+    picker = {
+      enabled = true,
+      sources = {
+        explorer = {
+          hidden = true,
+          tree = true,
+          layout = { preset = "sidebar", preview = false },
+        },
+      },
+    },
+    explorer = {
+      enabled = true,
+      replace_netrw = true,
+    },
     bigfile = { enabled = true },
+    quickfile = { enabled = true },
+    scope = { enabled = true },
+    terminal = { enabled = true },
+    toggle = { enabled = true },
+    gitbrowse = { enabled = true },
+    image = {
+      enabled = true,
+      doc = {
+        inline = false,
+        float = true,
+      },
+    },
     lazygit = { enabled = true },
     indent = {
       animate = {
@@ -35,6 +60,17 @@ return {
       refresh = 50, -- refresh at most every 50ms
     },
   },
+  config = function(_, opts)
+    require("snacks").setup(opts)
+
+    Snacks.toggle.option("spell", { name = "Spelling" }):map("<leader>us")
+    Snacks.toggle.option("wrap", { name = "Wrap" }):map("<leader>uw")
+    Snacks.toggle.option("relativenumber", { name = "Relative number" }):map("<leader>uL")
+    Snacks.toggle.diagnostics():map("<leader>ud")
+    Snacks.toggle.inlay_hints():map("<leader>uh")
+    Snacks.toggle.treesitter():map("<leader>uT")
+    Snacks.toggle.indent():map("<leader>ug")
+  end,
   keys = {
     {
       "<leader>lg",
@@ -49,6 +85,35 @@ return {
         Snacks.bufdelete()
       end,
       { desc = "Delete Current Buffer" },
+    },
+    {
+      "<leader>tt",
+      function()
+        Snacks.terminal.toggle()
+      end,
+      desc = "Toggle terminal",
+    },
+    {
+      "<leader>gB",
+      function()
+        Snacks.gitbrowse.open()
+      end,
+      mode = { "n", "x" },
+      desc = "Open in browser",
+    },
+    {
+      "<leader>cR",
+      function()
+        Snacks.rename.rename_file()
+      end,
+      desc = "Rename file",
+    },
+    {
+      "<leader>iH",
+      function()
+        Snacks.image.hover()
+      end,
+      desc = "Show image at cursor",
     },
     {
       "]]",
@@ -120,13 +185,12 @@ return {
       end,
       desc = "Open Diagnostics",
     },
-    -- Experimental
     {
-      "<leader>sb",
+      "<C-n>",
       function()
         Snacks.picker.explorer({ hidden = true })
       end,
-      desc = "File explorer",
+      desc = "Open file sidebar",
     },
     {
       "<leader>gp",

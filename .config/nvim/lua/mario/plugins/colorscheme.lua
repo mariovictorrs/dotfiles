@@ -52,7 +52,6 @@ return {
             background = true,
           },
         },
-        neotree = true,
         semantic_tokens = true,
         telescope = true,
         treesitter = true,
