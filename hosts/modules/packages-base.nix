@@ -32,6 +32,7 @@
     delta
     eza
     just
+    fd
 
     # Shells & tools
     zsh
