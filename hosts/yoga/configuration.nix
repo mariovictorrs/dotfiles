@@ -15,6 +15,7 @@
     ../modules/packages-nvim.nix
     ../modules/gnome-desktop.nix
     ../modules/hyprland.nix
+    ../modules/vpn.nix
   ];
 
   # Enable Flakes
@@ -42,7 +43,8 @@
       "rd.systemd.show_status=auto"
     ];
 
-    initrd.luks.devices."luks-3087ca86-006e-4ec9-b222-92539539e463".device = "/dev/disk/by-uuid/3087ca86-006e-4ec9-b222-92539539e463";
+    initrd.luks.devices."luks-3087ca86-006e-4ec9-b222-92539539e463".device =
+      "/dev/disk/by-uuid/3087ca86-006e-4ec9-b222-92539539e463";
     initrd.verbose = false;
     consoleLogLevel = 3;
 
