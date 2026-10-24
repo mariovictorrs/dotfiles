@@ -15,7 +15,7 @@
     ../modules/packages-nvim.nix
     ../modules/gnome-desktop.nix
     ../modules/hyprland.nix
-    ../modules/vpn.nix
+    # ../modules/vpn.nix
   ];
 
   # Enable Flakes
