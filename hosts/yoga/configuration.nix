@@ -45,7 +45,6 @@
 
     initrd.luks.devices."luks-3087ca86-006e-4ec9-b222-92539539e463".device =
       "/dev/disk/by-uuid/3087ca86-006e-4ec9-b222-92539539e463";
-    initrd.verbose = false;
     consoleLogLevel = 3;
 
     plymouth = {
