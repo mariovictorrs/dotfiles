@@ -40,6 +40,16 @@
       "skillFolderHash": "34b3e1ac8c5cbdc3a24dfc053cad930aaddf41f6",
       "installedAt": "2026-11-20T18:00:40.542Z",
       "updatedAt": "2026-11-20T18:00:40.542Z"
+    },
+    "refactor": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "commit": "f10fdb8b2660ce85c98f220b2f1ca24653768a5c",
+      "skillPath": "skills/refactor/SKILL.md",
+      "skillFolderHash": "01cfb6a412faf9d680880cc3f631c419121a9916",
+      "installedAt": "2026-11-20T18:16:17.107Z",
+      "updatedAt": "2026-11-20T18:16:17.107Z"
     }
   },
   "dismissed": {
