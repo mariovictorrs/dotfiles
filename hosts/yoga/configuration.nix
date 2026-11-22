@@ -16,6 +16,7 @@
     ../modules/gnome-desktop.nix
     ../modules/hyprland.nix
     # ../modules/vpn.nix
+    ../modules/tailscale.nix
   ];
 
   # Enable Flakes
