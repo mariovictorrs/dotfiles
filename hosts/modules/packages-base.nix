@@ -46,6 +46,7 @@
     uv
     air
     gcc
+    hugo
 
     # Fonts
     nerd-fonts.jetbrains-mono
